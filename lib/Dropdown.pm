@@ -4,7 +4,7 @@ use WebService::Dropbox;
 
 sub startup {
     my $self = shift;
-    $self->secret('hogehoge');
+    $self->secrets('hogehoge');
     my $config = $self->plugin( 'Config', { file => 'config.conf' } );
     die "$config->{key} / $config->{secret} is undefined!"
       if ( !$config->{key} && !$config->{secret} );
